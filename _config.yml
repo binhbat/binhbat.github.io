@@ -1,0 +1,6 @@
+name: "SiuTV"
+subline: "fun for free"
+baseurl: "http://adv.sieutv.net"
+dataurl: "http://adv.sieutv.net/0data"
+asseturl: "http://adv.sieutv.net/assets"
+permalink: /:categories/:title/

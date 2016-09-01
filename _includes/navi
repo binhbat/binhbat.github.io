@@ -1,0 +1,14 @@
+<div class="row bg-success">
+<div class="btn-group pull-right">
+<a class="btn btn-warning" href="{{page.previous.url}}"><i class="glyphicon glyphicon-backward"></i></a>
+<button type="button" class="btn btn-warning" onclick="location.reload();"><i class="glyphicon glyphicon-refresh"></i></button>
+<a class="btn btn-warning" href="{{page.next.url}}"><i class="glyphicon glyphicon-forward"></i></a>
+</div>
+<a class="btn btn-danger" href="{{site.baseurl}}"><i class="glyphicon glyphicon-home"></i></a>
+<button class="btn btn-success" data-toggle="collapse" data-target="#navi"><i class="glyphicon glyphicon-th"></i></button>
+<b>{{page.title}}</b>
+</div>
+<div id="navi" class="row text-center collapse">
+{% for cate in site.categories %}{% assign c=cate | first %}{% assign posts=cate | last %}{% if c !="0x0" %}<a href="{{site.baseurl}}/{{c}}" class="btn btn-success wfixed"><img src="{{site.asseturl}}/flags/{{c}}.jpg" class="pull-left"/>{{c|upcase}}:<span class="badge">{{posts|size}}</span></a>{% endif %}{% endfor %}
+<a href="{{site.baseurl}}/about" class="btn btn-info wfixed"><i class="glyphicon glyphicon-info-sign"></i>info</a>
+</div>
