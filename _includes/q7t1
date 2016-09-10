@@ -1,8 +1,6 @@
 <script src="//content.jwplatform.com/libraries/V6NfEzT7.js"></script>
 <div id="myPlayer">&nbsp;</div>
 <script>var jwp = jwplayer('myPlayer');
-jwp.setup({image:"{{site.asseturl}}/img/sieutv16x9.png",file:"http://www.q7t1.com:8000/live/sYKADDaJs2/SnoQc6v4hZ/{{include.key}}.ts",aspectratio:"16:9",width:"100%",type:"hls",hlshtml:true,autostart:true});
+jwp.setup({image:"{{site.asseturl}}/img/sieutv16x9.png",file:"http://www.q7t1.com:8000/live/sYKADDaJs2/SnoQc6v4hZ/{{include.key}}.m3u8",aspectratio:"16:9",width:"100%",type:"hls",hlshtml:true,autostart:true});
 //jwp.on('error',function(){jwp.load({image:"{{site.asseturl}}/img/sieutv16x9.png",file:"http://www.q7t1.com:8000/live/sYKADDaJs2/SnoQc6v4hZ/{{include.key}}.ts"});jwp.play();});
-jwp.on('error',function(){theTimeout = setTimeout(function(){jwp.load({image:"{{site.asseturl}}/img/sieutv16x9.png",file:"http://www.q7t1.com:8000/live/sYKADDaJs2/SnoQc6v4hZ/{{include.key}}.ts"});jwp.play();},3000);});
-jwp.on('play',function(){clearTimeout(theTimeout);});
 </script>
