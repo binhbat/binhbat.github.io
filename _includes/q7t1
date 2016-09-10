@@ -2,5 +2,7 @@
 <div id="myPlayer">&nbsp;</div>
 <script>var jwp = jwplayer('myPlayer');
 jwp.setup({image:"{{site.asseturl}}/img/sieutv16x9.png",file:"http://www.q7t1.com:8000/live/sYKADDaJs2/SnoQc6v4hZ/{{include.key}}.ts",aspectratio:"16:9",width:"100%",type:"hls",hlshtml:true});
-jwp.on('error', function(){jwp.load({image:"{{site.asseturl}}/img/sieutv16x9.png",file:"http://www.q7t1.com:8000/live/sYKADDaJs2/SnoQc6v4hZ/{{include.key}}.ts"});jwp.play();});
+jwp.on('error',function(){jwp.load({image:"{{site.asseturl}}/img/sieutv16x9.png",file:"http://www.q7t1.com:8000/live/sYKADDaJs2/SnoQc6v4hZ/{{include.key}}.ts"});jwp.play();});
+jwp.on('buffer',function(){theTimeout = setTimeout(function(){jwp.load({image:"{{site.asseturl}}/img/sieutv16x9.png",file:"http://www.q7t1.com:8000/live/sYKADDaJs2/SnoQc6v4hZ/{{include.key}}.ts"});jwp.play();},1000);});
+jwp.on('play',function(){clearTimeout(theTimeout);});
 </script>
