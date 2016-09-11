@@ -10,5 +10,8 @@
 </div>
 <div id="navi" class="row text-center collapse">
 {% for cate in site.categories %}{% assign c=cate | first %}{% assign posts=cate | last %}{% if c !="0x0" %}<a href="{{site.baseurl}}/{{c}}" class="btn btn-success wfixed"><img src="{{site.asseturl}}/flags/{{c}}.jpg" class="pull-left"/>{{c|upcase}}:<span class="badge">{{posts|size}}</span></a>{% endif %}{% endfor %}
-<a href="{{site.baseurl}}/about" class="btn btn-info wfixed"><i class="glyphicon glyphicon-info-sign"></i>info</a>
+<a href="/0phanloai" class="btn btn-warning">Chờ Phân Loại</a>
+<a href="/phimma" class="btn btn-warning">Phim Ma</a>
+<a href="/phimhoathinh" class="btn btn-warning">Phim Hoạt Hình</a>
+<a href="{{site.baseurl}}/about" class="btn btn-"><i class="glyphicon glyphicon-info-sign"></i>info</a>
 </div>
