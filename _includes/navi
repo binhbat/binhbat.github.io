@@ -13,5 +13,5 @@
 <a href="/0phanloai" class="btn btn-warning">Chờ Phân Loại</a>
 <a href="/phimma" class="btn btn-warning">Phim Ma</a>
 <a href="/phimhoathinh" class="btn btn-warning">Phim Hoạt Hình</a>
-<a href="{{site.baseurl}}/about" class="btn btn-"><i class="glyphicon glyphicon-info-sign"></i>info</a>
+<a href="{{site.baseurl}}/about" class="btn btn-info"><i class="glyphicon glyphicon-info-sign"></i>info</a>
 </div>

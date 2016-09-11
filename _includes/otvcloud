@@ -1,0 +1,6 @@
+<script src="//content.jwplatform.com/libraries/V6NfEzT7.js"></script>
+<div id="myPlayer">&nbsp;</div>
+<script>var jwp = jwplayer('myPlayer');
+jwp.setup({image:"{{site.asseturl}}/img/sieutv16x9.png",file:"http://eshare.live.otvcloud.com/otv/nyz/live/channel{{include.key}}/400.m3u8",aspectratio:"16:9",width:"100%",type:"hls",hlshtml:true,autostart:true});
+//jwp.on('error',function(){jwp.load({image:"{{site.asseturl}}/img/sieutv16x9.png",file:"http://eshare.live.otvcloud.com/otv/nyz/live/channel{{include.key}}.ts"});jwp.play();});
+</script>
