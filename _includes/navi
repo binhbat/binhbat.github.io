@@ -1,9 +1,28 @@
+{% assign cat = page.categories | first | join: '' %}
+{% for post in site.categories.[cat] %}
+{% if post.url == page.url %}
+{% assign post_index0 = forloop.index0 %}
+{% assign post_index1 = forloop.index %}
+{% endif %}
+{% endfor %}
+{% for post in site.categories.[cat] %}
+{% if post_index0 == forloop.index %}
+{% assign next_post = post.url %}
+{% endif %}
+{% if post_index1 == forloop.index0 %}
+{% assign prev_post = post.url %}
+{% endif %}
+{% endfor %}
 <div class="row bg-success">
-<div class="btn-group pull-right">
-<a class="btn btn-warning" href="{{page.previous.url}}"><i class="glyphicon glyphicon-backward"></i></a>
-<button type="button" class="btn btn-warning" onclick="location.reload();"><i class="glyphicon glyphicon-refresh"></i></button>
-<a class="btn btn-warning" href="{{page.next.url}}"><i class="glyphicon glyphicon-forward"></i></a>
-</div>
+	<div class="btn-group pull-right">
+	{% if prev_post %}
+		<a class="btn btn-warning" href="{{site.baseurl}}{{prev_post}}"><i class="glyphicon glyphicon-backward"></i></a>
+	{% endif %}
+		<button type="button" class="btn btn-warning" onclick="location.reload();"><i class="glyphicon glyphicon-refresh"></i></button>
+	{% if next_post %}
+		<a class="btn btn-warning" href="{{site.baseurl}}{{next_post}}"><i class="glyphicon glyphicon-forward"></i></a>
+	{% endif %}
+	</div>
 <a class="btn btn-danger" href="{{site.baseurl}}"><i class="glyphicon glyphicon-home"></i></a>
 <button class="btn btn-success" data-toggle="collapse" data-target="#navi"><i class="glyphicon glyphicon-th"></i></button>
 <b>{{page.title}}</b>
