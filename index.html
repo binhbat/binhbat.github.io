@@ -1,6 +1,14 @@
 ---
-layout: sieutv
-title: Welcome to SiuTV.
-tags: ["Nổi Bật","Nhạc","Thiếu Nhi","football"]
+layout: page
+title: Welcome to SieuTV.net
 ---
+<script>
+var ver=2;
+var cap = /key=([^&]+)/.exec(window.location.href)[1];
+if (cap) {
+	if (cap==ver)
+	window.location = "{{site.baseurl}}/home" ;
+}
+</script>
 {% include iframe src="//www.youtube.com/embed/u4Y6Bp55szQ?rel=0" %}
+plz update new version: <a href="http://dl.sieutv.net/sieutv.apk">http://dl.sieutv.net/sieutv.apk</a>

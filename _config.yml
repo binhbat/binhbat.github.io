@@ -1,6 +1,6 @@
-name: "SiuTV"
+name: "SieuTV"
 subline: "fun for free"
 baseurl: "http://adv.sieutv.net"
-dataurl: "http://adv.sieutv.net/0data"
-asseturl: "http://adv.sieutv.net/assets"
+dataurl: "http://sieutv.net/0data"
+asseturl: "http://sieutv.net/assets"
 permalink: /:categories/:title/
