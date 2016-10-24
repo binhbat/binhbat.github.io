@@ -4,3 +4,4 @@ title: Welcome to SieuTV.net
 ---
 {% include iframe src="//www.youtube.com/embed/u4Y6Bp55szQ?rel=0" %}
 <center>{% for cate in site.categories %}{% assign c=cate | first %}{% assign posts=cate | last %}{% if c !="0x0" %}<a href="{{site.baseurl}}/{{c}}" class="btn btn-success wfixed"><img src="{{site.asseturl}}/flags/{{c}}.jpg" class="pull-left"/><span class="pull-left">{{c|upcase}}</span><span class="badge pull-right">{{posts|size}}</span></a>{% endif %}{% endfor %}<a class="btn btn-warning" href="{{site.baseurl}}/about"><i class="glyphicon glyphicon-info-sign"></i>About</a></center>
+{% include postbytag key="Nổi Bật" %}

@@ -1,7 +1,7 @@
 --- 
 layout: sieutv
 title: keengtv_vn
-tags: ["VNplus"]
+tags: ["VNplus","Nổi Bật"]
 thumb: keengtv_vn
 ---
 {% include tvadv key="keengtv_vn" %}
