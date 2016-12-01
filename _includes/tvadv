@@ -1,1 +1,1 @@
-<video poster="{{site.asseturl}}/img/sieutv16x9.jpg" data-setup="{}" id="player0" class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9" controls preload="auto"><source src="{{include.src}}" type='application/x-mpegurl'></video>
+<div class="embed-responsive embed-responsive-16by9"><video class="embed-responsive-item" poster="{{site.asseturl}}/img/sieutv16x9.png" controls="controls"><source src="{{include.src}}" type="application/x-mpegurl"></video></div>
